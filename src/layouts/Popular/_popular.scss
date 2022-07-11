@@ -1,0 +1,10 @@
+@use "../../styles/globals" as *;
+
+.popular {
+  background-color: $bg-grey;
+
+  &__recipes {
+    @include add_grid;
+    margin-bottom: 2.4rem;
+  }
+}

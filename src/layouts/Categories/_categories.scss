@@ -1,0 +1,8 @@
+@use "../../styles/globals" as *;
+
+.categories {
+  &__cards {
+    @include add_grid;
+    height: 450px;
+  }
+}

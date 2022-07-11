@@ -1,0 +1,14 @@
+@use "../../styles/globals" as *;
+
+.recipeVideo {
+    width: 100%;
+    &__title {
+        margin: 0 auto;
+        font-family: "Cinzel", sans-serif;
+        margin-bottom: 1rem;
+        max-width: 300px;
+    }
+    &__video {
+        width: 100%;
+    }
+}

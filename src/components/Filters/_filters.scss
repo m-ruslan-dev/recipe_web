@@ -1,0 +1,31 @@
+@use "../../styles/globals" as *;
+
+.filters {
+    width: 100%;
+    max-width: 260px;
+    padding: 1rem 2rem;
+    background-color: $bg-grey;
+    border: 1px solid #e0e0e7;
+    border-radius: 5px;
+    text-align: start;
+
+    &__category {
+        margin-bottom: 1rem; 
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__heading {
+        margin-bottom: 0.5rem;
+    }
+    &__item {
+        margin-bottom: 0.2rem;
+        a {
+            display: block;
+            &:hover {
+                color: $orange-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}

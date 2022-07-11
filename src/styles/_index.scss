@@ -1,0 +1,23 @@
+// Components 
+@forward "../components/Navbar/navbar";
+@forward "../components/StatsCard/statsCard";
+@forward "../components/RecipeCard/recipe-card";
+@forward "../components/RecipeCard/recipe-card-large";
+@forward "../components/CategoryLink/category-link";
+@forward "../components/RecipeDetails/recipeDetails";
+@forward "../components/AddNewComment/addNewComment";
+@forward "../components/Comment//comment";
+@forward "../components/Searchbar/searchbar";
+@forward "../components/Filters/filters";
+@forward "../components/RecipeVideo/recipeVideo";
+@forward "../components/SearchResults/searchResults";
+
+// Layouts
+@forward "../layouts/Hero/hero";
+@forward "../layouts/Statistics/statistics";
+@forward "../layouts/Categories/categories";
+@forward "../layouts/Popular/popular";
+@forward "../layouts/Cuisines/cuisines";
+@forward "../layouts/RandomRecipes/random-recipes";
+@forward "../layouts/Comments/comments";
+@forward "../layouts/SearchSection/searchSection";

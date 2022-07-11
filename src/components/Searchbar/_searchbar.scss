@@ -1,0 +1,29 @@
+@use "../../styles/globals" as *;
+
+.searchbar {
+    @include add_flex;
+    height: 2.2rem;
+    width: 30rem;
+    &__input {
+        flex: 1 1 auto;
+        padding: 0.5rem;
+        outline: none;
+        font-size: 17px;
+        font-family: inherit;
+        height: 100%;
+        border: 1px solid #e0e0e7;
+        border-radius: 4px 0 0 4px;
+    }
+    &__submit {
+        flex: 0 1 3rem;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        background-color: $orange-color;
+        height: 100%;
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 100%;
+        text-align: center;
+        cursor: pointer;
+    } 
+}

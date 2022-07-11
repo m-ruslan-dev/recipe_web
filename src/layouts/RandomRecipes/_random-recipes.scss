@@ -1,0 +1,9 @@
+@use "../../styles/globals" as *;
+
+.random-recipes {
+    background-color: $bg-grey;
+    &__recipes {
+        @include add_grid;
+        margin-bottom: 2.4rem;
+    }
+}

@@ -1,0 +1,23 @@
+export const databases = [
+    "https://www.themealdb.com/api/json/v1/1/filter.php?i=cheese",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?i=pork",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?i=avocado",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?i=bread",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?i=cacao",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?i=chilli",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?c=breakfast",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?c=dessert",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?c=starter",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?c=seafood",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?c=vegetarian",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?a=american",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?a=french",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?a=italian",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?a=japanese",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?a=mexican",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?a=indian",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?a=turkish",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?a=egyptian",
+    "https://www.themealdb.com/api/json/v1/1/filter.php?a=greek"
+];

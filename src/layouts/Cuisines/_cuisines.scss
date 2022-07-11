@@ -1,0 +1,8 @@
+@use "../../styles/globals" as *;
+
+.cuisines {
+    &__holder {
+        @include add_grid;
+        height: 450px;
+    }
+}

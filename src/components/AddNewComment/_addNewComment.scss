@@ -1,0 +1,30 @@
+@use "../../styles/globals" as *;
+
+.add-comment {
+    width: 100%;
+    text-align: start;
+    margin-bottom: 2rem;
+    &__heading {
+        margin-bottom: 0.8rem;
+    }
+
+    &__form {
+        @include add_flex();
+        flex-direction: column;
+    }
+    &__input {
+        width: 100%;
+        padding: 0.8rem;
+        resize: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-family: inherit;
+        min-height: 120px;
+        margin-bottom: 0.5rem;
+        outline: none;
+        border: 1px solid rgb(194, 194, 194);
+    }
+    .recipe-page-btn {
+        align-self: flex-end;
+    }
+}
