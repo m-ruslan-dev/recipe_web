@@ -5,6 +5,7 @@ import RecipeVideo from "../../components/RecipeVideo/RecipeVideo";
 import Comments from "../../layouts/comments/comments";
 
 const RecipePage = () => {
+    window.scrollTo(0, 0);
     const {id} = useParams();
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
 

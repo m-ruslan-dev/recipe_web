@@ -21,4 +21,33 @@
   &__nav-item:first-child {
     margin-right: 1.2rem;
   }
+  &__nav-item {
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  min-width: 140px;
+  z-index: 99999;
+  padding: 0.4rem 0.8rem;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
+  &__item {
+    height: auto;
+    line-height: 1.9rem;
+    text-align: start;
+  }
+  &__link {
+    display: block;
+    &:hover {
+      color: $orange-color;
+    }
+  }
 }
