@@ -42,18 +42,29 @@ ul {
     list-style-type: none;
 }
 
-// Classes
+// Selectors
 .container {
-    padding: 2.4rem 5%;
-
-    &--recipe {
-        padding: 2.4rem 16%;
+    padding: 2.4rem 10%;
+}
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 2.4rem 4%;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .container {
+        padding: 2.4rem 14%;
+    }
+}
+@media screen and (min-width: 1700px) {
+    .container {
+        padding: 2.4rem 18%;
     }
 }
 
 .section-heading {
     margin-bottom: 2.4rem;
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     font-family: "Cinzel", sans-serif;
 }
@@ -67,4 +78,9 @@ ul {
     font-size: 16px;
     font-family: inherit;
     cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+    .recipe-page-btn {
+        font-size: 18px;
+    }
 }

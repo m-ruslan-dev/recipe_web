@@ -8,7 +8,7 @@ let RandomRecipes = () => {
     return (
         <section className="random-recipes container">
             <h1 className="section-heading">Random Recipes</h1>
-            <div className="random-recipes__recipes">
+            <div className="random-recipes__holder">
                 {recipes.map((recipe) => {
                     return <RecipeCard title={recipe.strMeal} image={recipe.strMealThumb} id={recipe.idMeal} key={recipe.idMeal} />
                 })}

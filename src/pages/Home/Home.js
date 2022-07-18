@@ -6,6 +6,7 @@ import Categories from "../../layouts/Categories/Categories";
 import Popular from "../../layouts/Popular/Popular";
 import Cuisines from "../../layouts/Cuisines/Cuisines";
 import RandomRecipes from "../../layouts/RandomRecipes/RandomRecipes";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Home = () => {
     return (<>

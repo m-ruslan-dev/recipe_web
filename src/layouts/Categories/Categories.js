@@ -23,10 +23,10 @@ let Categories = () => {
         },
     ]
 
-    return (<section className="categories container" id="categories">
+    return (<section className="categories container">
         <h1 className="section-heading">Categories</h1>
 
-        <div className="categories__cards">
+        <div className="categories__holder">
             {links.map((link, i) => {
                 return <CategoryLink category={link.category} img={link.img} key={i} />
             })}

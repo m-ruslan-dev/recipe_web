@@ -14,15 +14,9 @@ const RecipeCard = ({title, image, id}) => {
 
             <div className="recipe-card__holder">
                 <div className="recipe-card__info">
-                    <Link to={`/recipe/${id}`}><h2>{title}</h2></Link>
+                    <Link to={`/recipe/${id}`}><h2 className="recipe-card__title">{title}</h2></Link>
                     <hr className="recipe-card__underline"></hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-                <div className="recipe-card__btns">
-                    <a href="#" className="recipe-card__icon" id="stars"><span><AiOutlineStar /></span>5</a>
-                    <a href="#" className="recipe-card__icon" id="comments"><span><FaRegComment /></span>14</a>
-                    <a href="#" className="recipe-card__icon" id="favorite"><span><MdFavoriteBorder /></span></a>
+                    <p className="recipe-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
         </div>

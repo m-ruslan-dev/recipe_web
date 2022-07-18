@@ -1,7 +1,24 @@
 @use "../../styles/globals" as *;
 
 .statistics {
-  @include add_grid();
-  padding: 0 5%;
   background-color: $bg-grey;
+  &__holder {
+    @include add_grid();
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .statistics {
+    &__holder {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .statistics {
+    &__holder {
+      grid-template-columns: 100%;
+    }
+  }
 }

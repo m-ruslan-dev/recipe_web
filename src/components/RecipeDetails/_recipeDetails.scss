@@ -2,9 +2,11 @@
 
 .recipe-details {
     @include add_flex($ai: flex-start);
-
+    width: 85%;
+    margin: 0 auto;
     &__about {
         @include add_flex($jc: flex-start);
+        width: 100%;
         flex-direction: column;
         margin-right: 1.5rem;
         flex: 3;
@@ -34,6 +36,7 @@
             margin-bottom: 0.5rem;
         }
     }
+
     &__ingredients-item {
         @include add_flex($jc: space-between);
         position: relative;
@@ -63,9 +66,12 @@
             letter-spacing: 2px;
         }
     }
-    &__name {
+    &__title {
         font-family: "Cinzel", sans-serif;
         margin-bottom: 0.5rem;
+        &--mobile {
+            display: none;
+        }
     }
     &__underline {
         border: 2px solid $orange-color;
@@ -86,8 +92,31 @@
             }
         }
     }
-    &__rating {
-        margin-bottom: 0.8rem;
-        font-size: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+    .recipe-details {
+        width: 100%;
+        flex-direction: column;
+
+        &__title {
+            display: none;
+            &--mobile {
+                display: block;
+            }
+        }
+
+        &__description {
+            font-size: 20px;
+        }
+        &__article-title {
+            font-size: 21px;
+        }
+        &__ingredients-item {
+            font-size: 19px;
+        }
+        &__instructions-text {
+            font-size: 20px;
+        }
     }
 }

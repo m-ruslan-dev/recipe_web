@@ -5,9 +5,9 @@ function CategoryLink({category, img}) {
     return (
         <Link to={`/search?filter=${category}`} className="category-link">
             <div className="category-link__img">
-                <img src={img}></img>
+                <img height="450px" src={img}></img>
             </div>
-            <h2 className="category-link__name">{category}</h2>
+            <h2 className="category-link__title">{category}</h2>
         </Link>
     )
 }

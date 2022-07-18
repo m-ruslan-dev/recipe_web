@@ -21,9 +21,21 @@
         background-color: $orange-color;
         height: 100%;
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 20px;
         line-height: 100%;
         text-align: center;
         cursor: pointer;
     } 
+}
+
+@media screen and (min-width: 1400px) {
+    .searchbar {
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .searchbar {
+        width: 100%;
+    }
 }

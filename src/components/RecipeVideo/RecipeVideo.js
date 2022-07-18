@@ -25,7 +25,7 @@ const RecipeVideo = ({url}) => {
  
 
     return (
-        <section className='recipeVideo container--recipe'>
+        <section className='recipeVideo container'>
             <h2 className='recipeVideo__title'>{title} Video</h2>
             <iframe 
                 className='recipeVideo__video' 

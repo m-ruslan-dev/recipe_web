@@ -1,53 +1,180 @@
 @use "../../styles/globals" as *;
 
 .navbar {
-  @include add_flex();
-  position: relative;
-  height: 60px;
-  border-bottom: 1px solid #e0e0e7;
-
-  &__nav {
-    @include add_flex();
-    margin: 0 3rem;
-    &--login {
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 60px;
-      line-height: 60px;
-      vertical-align: middle;
-    }
-  }
-  &__nav-item:first-child {
-    margin-right: 1.2rem;
-  }
-  &__nav-item {
     position: relative;
+    background-color: #fff;
+    width: 100%;
     height: 60px;
-    line-height: 60px;
-    vertical-align: middle;
-  }
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: 1px solid #e0e0e7;
+    font-style: "Montserrat", sans-serif;
+
+    &__holder {
+        @include add_flex();
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+    &__nav {
+        margin: 0 auto;
+        @include add_flex($jc: space-between);
+        height: 100%;
+        width: 50%;
+    }
+    &__logo, .mobile-nav__logo {
+        font-size: 22px;
+        font-family: "Cinzel", sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    &__nav--login {
+        position: absolute;
+        top: 0;
+        right: 3rem;
+        width: 9rem;
+    }
+    &__nav-item {
+        position: relative;
+        height: 100%;
+        line-height: 60px;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    &__link {
+        height: 100%;
+        font-size: 17px;
+        font-weight: 400;
+    }
 }
 
 .dropdown {
-  position: absolute;
-  top: 45px;
-  left: 0;
-  min-width: 140px;
-  z-index: 99999;
-  padding: 0.4rem 0.8rem;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
-  &__item {
-    height: auto;
-    line-height: 1.9rem;
-    text-align: start;
-  }
-  &__link {
-    display: block;
-    &:hover {
-      color: $orange-color;
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    min-width: 140px;
+    z-index: 30;
+    padding: 0.4rem 0.8rem;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
+
+    &__item {
+        height: auto;
+        line-height: 1.9rem;
+        text-align: start;
+        vertical-align: middle;
     }
-  }
+
+    &__link {
+        display: block;
+
+        &:hover {
+            color: $orange-color;
+        }
+    }
+}
+
+.mobile-nav {
+    @include add_flex($jc: space-between);
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    &__logo {
+        font-size: 20px;
+    }
+    &__menu-btn {
+        color: #000;
+        font-size: 30px;
+        height: 60px;
+        line-height: 60px;
+        vertical-align: middle;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+// Small screen
+@media screen and (max-width: 1000px) {
+    .navbar {
+        &__holder {
+            position: absolute;
+            background-color: #fff;
+            padding: 2rem 1rem;
+            width: 95%;
+            height: auto;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            z-index: 30;
+            border-bottom: 1px solid #e0e0e7;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.1);
+        }
+        &__nav {
+            width: 100%;
+            height: auto;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        &__nav--login {
+            position: static;
+            margin-top: 3rem;
+            width: 100%;
+        }
+        &__nav-item {
+            display: block;
+            width: 100%;
+            height: auto;
+            line-height: 2.5rem;
+        }
+        &__link {
+            display: block;
+            height: 2.5rem;
+            font-size: 21px;
+        }
+        &__logo {
+            display: none;
+        }
+
+        .dropdown {
+            position: static;
+            padding: 0;
+            border: 0;
+            box-shadow: none;
+            background-color: transparent;
+            width: 100%;
+            display: block;
+
+            &__item {
+                height: 2rem;
+                line-height: 2rem;
+            }
+
+            &__link {
+                text-align: center;
+                width: 100%;
+                font-size: 18px;
+                font-weight: 400;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+
+        .mobile-nav {
+            display: flex;
+        }
+        .menu-open {
+            display: flex;
+        }
+        .menu-close {
+            display: none !important;
+        }
+    }
 }

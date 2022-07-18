@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { categories, ingredients, cuisines } from "./filters_data";
+import useMediaQuery from "../../hooks/useMediaQuery";
+import { FaCogs } from "react-icons/fa";
 
 const Filters = ({setSearchParams}) => {
+    const isTablet = useMediaQuery("760px");
+    const [isOpen, setIsOpen] = useState(false);
+
     return (    
-        <aside className="filters">
+        <aside className={`filters ${isOpen ? "filters-open" : "filters-close"}`}>
+                {isTablet && <button type="button" className="filters__mobile-btn" 
+            onClick={() => setIsOpen(!isOpen)}><span><FaCogs /></span> Filters</button>}
+
                 <div className="filters__category">
                     <h4 className="filters__heading">Category</h4>
                     <ul className="filters__links">

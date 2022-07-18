@@ -6,6 +6,7 @@
   padding-bottom: 1.2rem;
   text-align: start;
   background-color: #fff;
+  width: 100%;
 
   &__img {
         width: 100%;
@@ -25,11 +26,11 @@
   }
   &__info {
     margin-bottom: 1.5rem;
-    h2 {
-      font-family: "Cinzel", sans-serif;
-      font-size: 20px;
-      margin-bottom: 0.5rem;
-    }
+  }
+  &__title {
+    font-family: "Cinzel", sans-serif;
+    font-size: 20px;
+    margin-bottom: 0.5rem;
   }
   &__underline {
     width: 33%;
@@ -37,60 +38,18 @@
     border: 1px solid $orange-color;
     border-radius: 5px;
   }
-
-  &__btns {
-    @include add_flex($jc: flex-start);
-    margin-top: auto;
-    width: 100%;
-    height: 20px;
-    line-height: 20px;
-    font-size: 15px;
-    #favorite {
-      font-size: 20px;
-      margin-left: auto;
-    }
-    #comments {
-      margin-left: 1rem;
-    }
-  }
-  &__icon {
-      span {
-        vertical-align: middle;
-        color: $orange-color;
-        font-size: 18px;
-        margin-right: 0.3rem;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-  }
 }
 
-.recipe-card--large {
-  align-items: flex-end;
-  flex-direction: row;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  height: 100%;
+@media screen and (max-width: 760px) {
   .recipe-card {
     &__img {
-      max-width: 160px;
-      max-height: 100%;
+      height: 240px;
     }
-    &__holder {
-      padding: 0 1rem;
+    &__title {
+      font-size: 22px;
     }
-    &__underline {
-      max-width: 80px;
-    }
-    &__info {
-      text-align: start;
-      margin-bottom: 2.5rem;
-    }
-    &__icon {
-      span {
-        font-size: 22px;
-      }
+    &__description {
+      font-size: 18px;
     }
   }
 }

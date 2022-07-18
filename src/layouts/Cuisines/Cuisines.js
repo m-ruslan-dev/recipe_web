@@ -24,7 +24,7 @@ function Cuisines() {
     ]
 
     return (
-        <section className="cuisines container" id="cuisines">
+        <section className="cuisines container">
             <h2 className="section-heading">Cuisines</h2>
             <div className="cuisines__holder">
                 {cuisinesLinks.map((link, i) => {

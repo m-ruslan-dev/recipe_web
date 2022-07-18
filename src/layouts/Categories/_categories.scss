@@ -1,8 +1,23 @@
 @use "../../styles/globals" as *;
 
 .categories {
-  &__cards {
-    @include add_grid;
-    height: 450px;
+  &__holder {
+    @include add_grid();
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .categories {
+    &__holder {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .categories {
+    &__holder {
+      grid-template-columns: 100%;
+    }
   }
 }

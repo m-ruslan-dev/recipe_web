@@ -19,12 +19,6 @@ const RecipeCardLarge = ({title, image, id}) => {
                     <hr className="recipe-card-large__underline"></hr>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-
-                <div className="recipe-card-large__btns">
-                    <a href="#" className="recipe-card-large__icon" id="stars"><span><AiOutlineStar /></span>5</a>
-                    <a href="#" className="recipe-card-large__icon" id="comments"><span><FaRegComment /></span>14</a>
-                    <a href="#" className="recipe-card-large__icon" id="favorite"><span><MdFavoriteBorder /></span></a>
-                </div>
             </div>
         </div>
     )

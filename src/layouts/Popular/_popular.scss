@@ -3,8 +3,24 @@
 .popular {
   background-color: $bg-grey;
 
-  &__recipes {
+  &__holder {
     @include add_grid;
     margin-bottom: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .popular {
+    &__holder {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .popular {
+    &__holder {
+      grid-template-columns: 100%;
+    }
   }
 }

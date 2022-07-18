@@ -8,7 +8,7 @@ let Popular = () => {
     return (
         <section className="popular container">
             <h1 className="section-heading">Most Popular</h1>
-            <div className="popular__recipes">
+            <div className="popular__holder">
                 {recipes.map((recipe) => {
                     return <RecipeCard title={recipe.strMeal} image={recipe.strMealThumb} id={recipe.idMeal} key={recipe.idMeal} />
                 })}

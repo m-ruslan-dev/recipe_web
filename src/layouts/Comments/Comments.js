@@ -4,7 +4,7 @@ import Comment from "../../components/Comment/Comment";
 
 const Comments = () => {
     return (
-        <section className="comments-section container--recipe">
+        <section className="comments-section container">
             <AddNewComment />
             <div className="comments-section__holder">
                 <Comment />

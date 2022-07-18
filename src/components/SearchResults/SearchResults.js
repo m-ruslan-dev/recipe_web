@@ -1,11 +1,19 @@
 import React from 'react'; 
 import RecipeCardLarge from "../RecipeCard/RecipeCardLarge";
+import RecipeCard from "../RecipeCard/RecipeCard";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const SearchResults = ({recipes}) => {
+    const isTablet = useMediaQuery("760px");
 
     return (<main className='search-results'>
         {recipes.map((recipe) => {
-            return <RecipeCardLarge title={recipe.strMeal} image={recipe.strMealThumb} id={recipe.idMeal} key={recipe.idMeal} />
+            if (isTablet) {
+                return <RecipeCard title={recipe.strMeal} image={recipe.strMealThumb} id={recipe.idMeal} key={recipe.idMeal} />
+            }
+            else {
+                return <RecipeCardLarge title={recipe.strMeal} image={recipe.strMealThumb} id={recipe.idMeal} key={recipe.idMeal} />
+            }
         })}
     </main>);
 }

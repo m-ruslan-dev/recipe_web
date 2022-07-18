@@ -2,7 +2,22 @@
 
 .cuisines {
     &__holder {
-        @include add_grid;
-        height: 450px;
+        @include add_grid();
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .cuisines {
+        &__holder {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .cuisines {
+        &__holder {
+            grid-template-columns: 100%;
+        }
     }
 }

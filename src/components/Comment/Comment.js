@@ -2,7 +2,7 @@ import React from "react";
 
 const Comment = () => {
     return (
-        <div className="comment">
+        <div className="comment container">
             <img src="https://via.placeholder.com/80" className="comment__user-avatar" alt="avatar"></img>
             <div className="comment__holder">
                 <h4 className="comment__username">John Doe:</h4>

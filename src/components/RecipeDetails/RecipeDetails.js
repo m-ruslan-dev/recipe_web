@@ -42,28 +42,19 @@ const RecipeDetails = ({url}) => {
     let recipeTitle = recipe.strMeal;
 
     return (
-        <main className="recipe-details container--recipe">
+        <main className="recipe-details container">
+            <h1 className="recipe-details__title recipe-details__title--mobile">{recipeTitle}</h1>
+
             <div className="recipe-details__about">
                 <img src={recipeImage} className="recipe-details__img" width="300" height="280" alt="picture of the dish"></img>
                 <p className="recipe-details__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore, consectetur adipiscing elit, et dolore magna aliqua.</p>
-
-                <div className="recipe-details__info">
-                    <div className="recipe-details__rating">
-                        <span className="recipe-details__star-icon"><AiOutlineStar /></span>
-                        <span className="recipe-details__star-icon"><AiOutlineStar /></span>
-                        <span className="recipe-details__star-icon"><AiOutlineStar /></span>
-                        <span className="recipe-details__star-icon"><AiOutlineStar /></span>
-                        <span className="recipe-details__star-icon"><AiOutlineStar /></span>
-                    </div>
-                    <button type="button" className="recipe-page-btn">Add to favorites</button>
-                </div>
             </div>
 
             <div className="recipe-details__cooking">
                 <article className="recipe-details__ingredients">
-                    <h2 className="recipe-details__name">{recipeTitle}</h2>
+                    <h1 className="recipe-details__title">{recipeTitle}</h1>
                     <hr className="recipe-details__underline"></hr>
-                    <h3>Ingredients</h3>
+                    <h3 className="recipe-details__article-title">Ingredients</h3>
 
                     <ul className="recipe-details__ingredients-list">
                         {ingredients.map((ingredients, index) => {
@@ -77,8 +68,10 @@ const RecipeDetails = ({url}) => {
                 </article>
 
                 <article className="recipe-details__instructions">
-                    <h3>Instructions</h3>
-                    <p dangerouslySetInnerHTML={{__html: instructions}}></p>
+                    <h3 className="recipe-details__article-title">Instructions</h3>
+                    <p className="recipe-details__instructions-text" 
+                        dangerouslySetInnerHTML={{__html: instructions}}>
+                    </p>
                 </article>
             </div>
         </main>

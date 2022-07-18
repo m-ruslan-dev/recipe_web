@@ -3,26 +3,25 @@
 .stats-card {
     @include add_flex;
     flex-direction: column;
-    margin: 2.2rem 0;
     background-color: #fff;
     text-align: center;
     padding: 1.2rem 0.8rem;
 
     &__icon {
-        font-size: 3.5rem;
+        font-size: 56px;
         color: $orange-color;
         line-height: 100%;
         margin-bottom: 0.5rem;
     }
 
     &__number {
-        font-size: 2rem;
+        font-size: 32px;
         font-weight: 500;
         margin-bottom: 0.2rem;
     }
 
     &__name {
-        font-size: 1rem;
+        font-size: 16px;
         text-transform: uppercase;
     }
 }

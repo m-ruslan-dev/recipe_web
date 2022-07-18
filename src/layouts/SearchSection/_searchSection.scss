@@ -4,12 +4,19 @@
     @include add_flex($ai: flex-start);
     flex-direction: row;
     width: 100%;
-    padding: 2.4rem 12%;
     &__wrapper {
         margin-left: 1.5rem;
         width: 100%;
     }
     .searchbar {
         margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .search-section {
+        &__wrapper {
+            margin-left: 0;
+        }
     }
 }
