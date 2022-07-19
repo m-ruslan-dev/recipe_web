@@ -5,7 +5,7 @@
 **Searching and uploading recipes website** 
 **[Live Demo](https://deli-web.netlify.app/ "Live Demo")**
 
-** Currently done: **
+**Currently done:**
 - Website\`s main layout
 - Fetching recipes data from the database
 - Random recipes are fetched on home page
@@ -13,7 +13,7 @@
 - Responsive design
 - Search page and filters basic structure
 
-** In progress: **
+**In progress:**
 - Users system
 - Adding and deleting recipes
 - Adding and deleting comments
@@ -21,7 +21,7 @@
 - Search system
 - Filter system
 
-**Build with: **
+**Build with:**
 - HTML5
 - CSS3 / Sass
 - React JS
