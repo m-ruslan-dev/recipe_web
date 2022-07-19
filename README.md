@@ -21,7 +21,7 @@
 - Search system
 - Filter system
 
-**Build with:**
+**Built with:**
 - HTML5
 - CSS3 / Sass
 - React JS
