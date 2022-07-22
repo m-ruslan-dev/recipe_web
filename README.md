@@ -3,7 +3,8 @@
 ## Recipes Website (in development)
 
 **Searching and uploading recipes website** 
-**[Live Demo](https://deli-web.netlify.app/ "Live Demo")**
+
+**[Live Demo](https://reci-web.netlify.app/ "Live Demo")**
 
 **Currently done:**
 - Website\`s main layout
