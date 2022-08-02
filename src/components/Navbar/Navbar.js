@@ -60,10 +60,6 @@ const Navbar = () => {
                     <li className='navbar__nav-item' style={{order: 5}}><Link to="/search" className='navbar__link'>Search</Link></li>
                     <li className='navbar__nav-item navbar__logo' style={{order: 3}}><Link to="/">Logo</Link></li>
                 </ul>
-                <ul className='navbar__nav navbar__nav--login'>
-                    <li className='navbar__nav-item'><Link to="/authorization" className='navbar__link'>Log In</Link></li>
-                    <li className='navbar__nav-item'><Link to="/authorization" className='navbar__link'>Sign Up</Link></li>
-                </ul>
             </div>
         </nav>
     );

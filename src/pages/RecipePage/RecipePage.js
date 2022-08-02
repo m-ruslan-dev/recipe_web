@@ -2,7 +2,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import RecipeDetails from "../../components/RecipeDetails/RecipeDetails";
 import RecipeVideo from "../../components/RecipeVideo/RecipeVideo";
-import Comments from "../../layouts/comments/comments";
 
 const RecipePage = () => {
     window.scrollTo(0, 0);
@@ -12,7 +11,6 @@ const RecipePage = () => {
     return (<>
         <RecipeDetails url={url}/>
         <RecipeVideo url={url}/>
-        <Comments />
     </>)
 }
 
