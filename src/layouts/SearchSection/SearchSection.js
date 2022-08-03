@@ -12,7 +12,7 @@ const makeLink = (searchParams) => {
         if (key === "s") {
             link = `https://www.themealdb.com/api/json/v1/1/search.php?${searchParams}`
         }
-        if (key === "a" || "i" || "c") {
+        else {
             link = `https://www.themealdb.com/api/json/v1/1/filter.php?${searchParams}`
         }
     }
