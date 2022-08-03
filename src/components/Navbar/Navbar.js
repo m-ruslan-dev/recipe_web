@@ -10,16 +10,16 @@ const Navbar = () => {
     const [isHovering, setIsHovering] = useState({});
     const isTablet = useMediaQuery("1000px");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [openDropdown, setOpenDropdown] = useState({categories: false, cuisines: false});
+    const [isDropdownOpen, setIsDropdownOpen] = useState({categories: false, cuisines: false});
     const location = useLocation();
 
     const dropdownClicked = (e, dropdown) => {
         e.preventDefault();
-        if (openDropdown[dropdown] === true) {
-            setOpenDropdown({[dropdown]: false})
+        if (isDropdownOpen[dropdown] === true) {
+            setIsDropdownOpen({[dropdown]: false})
         } 
         else {
-            setOpenDropdown({[dropdown]: true})
+            setIsDropdownOpen({[dropdown]: true})
         }
     }
 
@@ -40,21 +40,28 @@ const Navbar = () => {
                 <ul className='navbar__nav'>
                     <li className='navbar__nav-item' style={{order: 1}}><Link to="/" className='navbar__link'>Home</Link></li>
 
+                    {/* Dropdown "Categories"*/}
                     <li className='navbar__nav-item' style={{order: 2}} 
                         onMouseEnter={() => isTablet || setIsHovering({categories: true})} 
                         onMouseLeave={() => isTablet || setIsHovering({categories: false})} >
+
                         <p className='navbar__link' 
                             onClick={(e) => isTablet && dropdownClicked(e, "categories")}>Categories</p>
-                        {isHovering.categories && <Dropdown links={categories}/>}
-                        {openDropdown.categories && <Dropdown links={categories}/>}
+
+                        {isHovering.categories && <Dropdown links={categories} filter="categories"/>}
+                        {isDropdownOpen.categories && <Dropdown links={categories} filter="categories"/>}
                     </li>
+
+                    {/* Dropdown "Cuisines" */}
                     <li className='navbar__nav-item' style={{order: 4}} 
                         onMouseEnter={() => isTablet || setIsHovering({cuisines: true})} 
                         onMouseLeave={() => isTablet || setIsHovering({cuisines: false})} >
+
                         <p className='navbar__link' 
                             onClick={(e) => isTablet && dropdownClicked(e, "cuisines")}>Cuisines</p>
-                        {isHovering.cuisines && <Dropdown links={cuisines}/>}
-                        {openDropdown.cuisines && <Dropdown links={cuisines}/>}
+
+                        {isHovering.cuisines && <Dropdown links={cuisines} filter="cuisines"/>}
+                        {isDropdownOpen.cuisines && <Dropdown links={cuisines} filter="cuisines"/>}
                     </li>
 
                     <li className='navbar__nav-item' style={{order: 5}}><Link to="/search" className='navbar__link'>Search</Link></li>
