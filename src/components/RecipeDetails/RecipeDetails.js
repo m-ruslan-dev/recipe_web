@@ -1,8 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import { AiOutlineStar } from "react-icons/ai";
-
 const createIngredientObjects = (recipe) => {
     let recipeArray = Object.entries(recipe);
     let allIngredients = recipeArray.filter(ingr => ingr[0].includes("strIngredient") && ingr[1] != "");

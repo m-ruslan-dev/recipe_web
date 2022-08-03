@@ -20,7 +20,7 @@ const Filters = ({setSearchParams}) => {
                                 <li className="filters__item" key={i}>
                                     <a href="#" onClick={(e) => {
                                         e.preventDefault();
-                                        setSearchParams({filter: category});
+                                        setSearchParams({c: category});
                                     }}>{ category }</a>
                                 </li>
                             )
@@ -36,7 +36,7 @@ const Filters = ({setSearchParams}) => {
                                 <li className="filters__item" key={i}>
                                     <a href="#" onClick={(e) => {
                                         e.preventDefault();
-                                        setSearchParams({filter: ingredient});
+                                        setSearchParams({i: ingredient});
                                     }}>{ ingredient }</a>
                                 </li>
                             )
@@ -52,7 +52,7 @@ const Filters = ({setSearchParams}) => {
                                 <li className="filters__item" key={i}>
                                     <a href="#" onClick={(e) => {
                                         e.preventDefault();
-                                        setSearchParams({filter: cuisine});
+                                        setSearchParams({a: cuisine});
                                     }}>{ cuisine }</a>
                                 </li>
                             )
