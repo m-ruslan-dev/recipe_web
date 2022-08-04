@@ -6,7 +6,13 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 const SearchResults = ({recipes}) => {
     const isTablet = useMediaQuery("760px");
 
-    return (<main className='search-results'>
+    if (recipes === null) {
+        return <main className='search-results'>
+            <h2>Recipes not found</h2>
+        </main>
+    }
+    else {
+        return (<main className='search-results'>
         {recipes.map((recipe) => {
             if (isTablet) {
                 return <RecipeCard title={recipe.strMeal} image={recipe.strMealThumb} id={recipe.idMeal} key={recipe.idMeal} />
@@ -14,8 +20,9 @@ const SearchResults = ({recipes}) => {
             else {
                 return <RecipeCardLarge title={recipe.strMeal} image={recipe.strMealThumb} id={recipe.idMeal} key={recipe.idMeal} />
             }
-        })}
-    </main>);
+            })}
+        </main>);
+    }
 }
  
 export default SearchResults;

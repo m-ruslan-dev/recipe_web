@@ -22,16 +22,21 @@ const makeLink = (searchParams) => {
 const SearchSection = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [recipes, setRecipes] = useState([]);
+    const [error, setError] = useState(false);
     
     useEffect(async () => {
         let recipesLink = makeLink(searchParams);
         if (recipesLink != null) {
             let response = await fetch(recipesLink);
+            if (response.status != 200) {
+                setError("Error: could not fetch data");
+                throw new Error("Could not fetch data");
+            }
             let data = await response.json();
             let recipes = data.meals;
             setRecipes(recipes);
         }
-    }, [searchParams])
+    }, [searchParams]);
 
     const isTablet = useMediaQuery("760px");
 
@@ -41,7 +46,7 @@ const SearchSection = () => {
             <div className="search-section__wrapper">
                 <Searchbar />
                 {isTablet && <Filters setSearchParams={setSearchParams} />}
-                <SearchResults recipes={recipes} />
+                {error ? <h2>{error}</h2> : <SearchResults recipes={recipes} />}
             </div>
         </section>
     )

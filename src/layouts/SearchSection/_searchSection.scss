@@ -4,6 +4,7 @@
     @include add_flex($ai: flex-start);
     flex-direction: row;
     width: 100%;
+    text-align: start;
     &__wrapper {
         margin-left: 1.5rem;
         width: 100%;

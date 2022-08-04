@@ -1,12 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { AiOutlineStar } from "react-icons/ai";
-import { FaRegComment } from "react-icons/fa";
-import { MdFavoriteBorder } from "react-icons/md";
-
 const RecipeCardLarge = ({title, image, id}) => {
-
     return (
         <div className="recipe-card-large">
             <div className="recipe-card-large__img">
